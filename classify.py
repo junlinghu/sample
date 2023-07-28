@@ -40,7 +40,7 @@ class NeuralNetwork(nn.Module):
     def __init__(self):
         super().__init__()
         self.flatten = nn.Flatten()
-        self.get_layer = nn.Sequential(
+        self.get_layers = nn.Sequential(
                             nn.Linear(18, 20),
                             nn.ReLU(),
                             nn.Linear(20, 10),
