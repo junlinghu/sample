@@ -9,12 +9,12 @@ def load_csv(file_name):
         x2=int(row['x2'])
         plus=x1+x2
         total.append(plus)
-        print(x1, x2, plus)
+        print(i, x1, x2, plus)
         
     df['total'] = total
     df.to_csv("test_new.csv", sep='\t', index=False)
 
 
 if __name__ == '__main__':
-	file_name = "test.csv"
+	file_name = "test_num.csv"
 	load_csv(file_name)
