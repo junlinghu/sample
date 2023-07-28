@@ -45,5 +45,6 @@ def load_csv_text(file_name):
 if __name__ == '__main__':
 	#file_name = "test_number.csv"
 	#load_csv(file_name)
-	file_name = "test_text.csv"
+    file_name = "test_text.csv"
     npy_file = "test.npy"
+    load_csv_text(file_name)
