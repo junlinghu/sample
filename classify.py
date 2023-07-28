@@ -30,10 +30,17 @@ def generate_embedding(file_name, npy_file):
     embeddings = model.encode(sentences)
     np.save('data/' + npy_file, embeddings)
 
+import subprocess
+
+def download_file(url):
+    command = "wget {}".format(url)
+    subprocess.run(command, shell=True)
+    
 if __name__ == '__main__':
 	#file_name = "test_number.csv"
 	#load_csv(file_name)
     # file_name = "test_text.csv"
     # npy_file = "test.npy"
     # generate_embedding(file_name,npy_file)
-    wget https://www.dropbox.com/s/648ddugqtimjgxp/churn.csv
+    url="https://www.dropbox.com/s/648ddugqtimjgxp/churn.csv"
+    download_file(url)
