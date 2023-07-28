@@ -24,11 +24,11 @@ model.to(device)
 
 import numpy as np
 
-def generate_embedding(file_name, npy_file_name):
+def generate_embedding(file_name, npy_file):
     df = pd.read_csv(file_name, sep='\t')
     sentences = [str(row['title']) + '. ' + row['text'] for _, row in df.iterrows()]
     embeddings = model.encode(sentences)
-    np.save('data/' + npy_file_name, embeddings)
+    np.save('data/' + npy_file, embeddings)
 
 if __name__ == '__main__':
 	#file_name = "test_number.csv"
