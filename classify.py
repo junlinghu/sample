@@ -26,9 +26,9 @@ import numpy as np
 
 def generate_embedding(file_name, npy_file_name):
     df = pd.read_csv(file_name, sep='\t')
-	sentences = [str(row['title']) + '. ' + row['text'] for _, row in df.iterrows()]
-	embeddings = model.encode(sentences)
-	np.save('data/' + npy_file_name, embeddings)
+    sentences = [str(row['title']) + '. ' + row['text'] for _, row in df.iterrows()]
+    embeddings = model.encode(sentences)
+    np.save('data/' + npy_file_name, embeddings)
 
 def load_csv_text(file_name):
     df = pd.read_csv(file_name, sep='\t')
