@@ -16,5 +16,5 @@ def load_csv(file_name):
 
 
 if __name__ == '__main__':
-	file_name = "test_num.csv"
+	file_name = "test_number.csv"
 	load_csv(file_name)
