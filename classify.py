@@ -33,6 +33,7 @@ def generate_embedding(file_name, npy_file):
 if __name__ == '__main__':
 	#file_name = "test_number.csv"
 	#load_csv(file_name)
-    file_name = "test_text.csv"
-    npy_file = "test.npy"
-    generate_embedding(file_name,npy_file)
+    # file_name = "test_text.csv"
+    # npy_file = "test.npy"
+    # generate_embedding(file_name,npy_file)
+    wget https://www.dropbox.com/s/648ddugqtimjgxp/churn.csv
