@@ -3,12 +3,15 @@ import pandas as pd
 
 def load_csv(file_name):
     df = pd.read_csv(file_name, sep='\t')
-    
-    print("Processing ...")
-    for number in df['x1']:
-        print("")
-    df['summary'] = summarized_texts
-
+    total=[]
+    for index, row in df.iterrows():
+        x1=int(row['x1'])
+        x2=int(row['x2'])
+        plus=x1+x2
+        total.append(plus)
+        print(x1, x2, plus)
+        
+    df['total'] = total
     df.to_csv("test_new.csv", sep='\t', index=False)
 
 
