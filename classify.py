@@ -4,7 +4,7 @@ import pandas as pd
 def load_csv(file_name):
     df = pd.read_csv(file_name, sep='\t')
     total=[]
-    for index, row in df.iterrows():
+    for i, row in df.iterrows():
         x1=int(row['x1'])
         x2=int(row['x2'])
         plus=x1+x2
